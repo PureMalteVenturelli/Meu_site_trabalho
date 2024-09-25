@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+
+    <!-- Link para o CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+
+
+        /* Estilos Globais */
+        body {
+            background-image:url("plano.jpg");
+            background-size: cover;
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.103); /* COR DE FUNDO OPACIDADE */
+            background-blend-mode: overlay;
+
+         }
+        h1, p, label {
+            color: #fdfdfd; /*COR DAS LETRAS DAS PÁGINAS TUDO*/
+        }
+
+        nav {
+            
+            background-color: rgba(0, 0, 0, 0.911); /* Tarja preta translúcida */
+            color: rgb(17, 11, 11);
+            width: 100%;
+            display: flex; /* Mostra o menu */
+            flex-direction: row;
+            align-items: center; /* Centraliza verticalmente */
+        }
+        nav a {
+            color: rgb(248, 244, 244);
+            margin: 0 10px;    /* MODIFICAR ESPAÇAMENTO DAS CLASSES DO MENU */
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .container {
+            text-align: center; /* Centraliza o texto */
+            flex: 1;
+
+        }
+        .section {
+            display: none; /* Esconde todas as seções inicialmente */
+        }
+        .section.active {
+            display: block; /* Mostra a seção ativa */
+        }
+        form {
+            display: grid;
+            grid-template-columns: auto 2fr;          
+            gap: 7px;
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+        label {
+            text-align: right;
+            padding-right: 50px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+        }
+        input[type="submit"] {
+            grid-column: span 2;
+            background-color: #050505;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+
+        /* Estilos para a seção Home */
+        #home h1 {
+            font-weight: bolder; /* Texto em negrito */
+            font-size: 2.5em; /* Aumenta o tamanho da fonte do título */
+            margin-bottom: 40px; /* Adiciona espaço abaixo do título */
+            margin-top: 40px;
+        }
+        #home p {
+            font-weight: bolder; /* Texto em negrito */
+            font-size: 1.5em; /* Aumenta o tamanho da fonte das frases */
+            margin: 20px; /* Reduz o espaçamento entre as frases */
+            
+        }
+
+
+        /* Estilos para o rodapé */
+        footer {
+            background-color: #070707; /* Tarja mais escura */
+            color: white;
+            text-align: center;
+            padding: 5px 0; /* Diminui a altura da tarja */
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <!-- Menu de Navegação -->
+    <nav class="nav nav-tabs">
+        <img src="logojeanroca.png" alt="Logo" width="100" height="84" class="d-inline-block align-text-top">
+        <a class="nav-item nav-link active" data-toggle="tab" href="#home" style="color: rgb(255, 2, 2); font-size: 18px;">Home</a>
+        <a class="nav-item nav-link" data-toggle="tab" href="#receitas" style="color: rgb(255, 2, 2); font-size: 18px;" >Receitas</a>
+        <a class="nav-item nav-link" data-toggle="tab" href="#login" style="color: rgb(255, 2, 2); font-size: 18px;">Login</a>
+        <a class="nav-item nav-link" data-toggle="tab" href="#cadastro" style="color: rgb(255, 2, 2); font-size: 18px;">Cadastro</a>
+        <form id="proc" class="d-flex" role="search" style="margin-left: 950px; color: black;">
+
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="border: 2px solid rgb(255, 2, 2);">
+            <button class="btn btn-outline-danger">Pesquisar</button>
+
+        </form>
+    </nav>
+    <div style="margin-top: 50px; max-width: 800px;" class="container text-center" >
+        <div class="tab-content">
+            
+
+            <!-- Seção Home -->
+            <section id="home" class="section tab-pane fade show active">
+
+              <h1 style="color: #ffffff;">Receitas do grande Chef Joan Roca</h1>
+              <p  style="color: #ffffff;">Bem-vindo(a) ao site do Joan Roca.</p>
+              <p  style="color: #ffffff;">Melhor site de receitas para o seu dia a dia.</p>
+              
+              
+
+              
+              <!--SLIDES PÁGINA HOME-->
+
+              <div id="carouselExampleCaptions" class="carousel slide">
+                  <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1;"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <a href="#receitas">
+                        <img src="fotos das receitas/chocolate.jpg" class="d-block w-100" style="border: 3.9px solid #e6b4b4;">
+                    </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="caption-text">Que tal preparar um delicioso brownie para comer com a família no lanche da tarde? O passo a passo é bem simples e fácil de fazer. Confira</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="#receitas">
+                        <img src="fotos das receitas/bolinhodearroz.jpg" class="d-block w-100" style="border: 2.9px solid #e6b4b4;">
+                    </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="caption-text">Que tal uma receita deliciosa de bolinho de arroz crocante e simples para seu almoço ficar ainda mais gostoso? Aprenda o passo a passo:</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="#receitas">
+                      <img src="fotos das receitas/macarrao-carbonara.jpg" class="d-block w-100" style="border: 2.9px solid #e6b4b4;">
+                    </a>
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5 class="caption-text">O prato fica igualmente saboroso e você vai adorar esta receita de macarrão. Veja como fazer macarrão à carbonara com carne-seca para seu almoço ou jantar, e outras ocasiões.</h5>
+                      </div>
+                    </div>
+                </div>
+                
+                <style>
+                    .carousel-caption {
+                        bottom: -0.3cm; /* Ajuste a posição inferior conforme necessário */
+                    }
+                
+                    .caption-text {
+                        background-color: rgba(255, 255, 255, 0.7); /* Fundo branco translúcido */
+                        padding: 8px;
+                        border-radius: 40px;
+                        color: rgb(7, 5, 5); /* Cor do texto */
+                    }
+                </style>
+                
+                
+                    
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+          </section>
+          
+          <style>
+              .carousel-control-prev-icon,
+              .carousel-control-next-icon {
+                  background-color: rgba(255, 255, 255, 0); /* Fundo branco translúcido */
+                  border-radius: 60%; /* Forma de bola */
+                  width: 40px;
+                  height: 40px;
+              }
+          
+              .carousel-control-prev-icon {
+                  background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 fill%3D%22%23000%22 viewBox%3D%220 0 8 8%22%3E%3Cpath d%3D%22M4.5 0L0 4l4.5 4V0z%22/%3E%3C/svg%3E');
+              }
+          
+              .carousel-control-next-icon {
+                  background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 fill%3D%22%23000%22 viewBox%3D%220 0 8 8%22%3E%3Cpath d%3D%22M3.5 0v8l4.5-4-4.5-4z%22/%3E%3C/svg%3E');
+              }
+          </style>
+          
+
+            <!-- Seção Receitas -->
+            <section id="receitas" class="section tab-pane fade">
+                <h1 style="-webkit-text-stroke: 0px #050505; font-size: 50px;  margin-top: -50px;">Receitas</h1>
+                <p style="-webkit-text-stroke: 0px #050505; font-size: 30px; font-weight: bold;"> Esta é a seção de Receitas.</p>
+
+            
+            <div style="width: 150rem; margin-left: -300px;" class="container text-center" >
+
+                <div style="display: flex; flex-direction: row;" class="container text-center">
+                    <div class="card" style="width: 350px; height: auto; margin-right: 20px;" class="container text-center">
+                        <h5 class="card-header">Brownie de chocolate</h5>
+                        <img src="fotos das receitas/chocolate.jpg">
+                        <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <ul style="text-align: left;">
+
+                            <li>2 xícaras de achocolatado em pó</li>
+                            <li>1 xícara de farinha de trigo</li>
+                            <li>1 xícara de açúcar</li>
+                            <li>200g de manteiga</li>
+                            <li>4 ovos</li>
+                            
+                        </ul>
+                        <h5 style="text-decoration: underline; margin-bottom: 20px;">Modo de preparo</h5>
+                        <ol style="text-align: left;">
+
+                            <li>Em uma tigela coloque os ovos e o açúcar e bata com a ajuda de fouet ou garfo;</li>
+                            <li>Em seguida adicione a manteiga e o achocolatado em pó;</li>
+                            <li>Mexa a massa até que fique homogênea;</li>
+                            <li>Despeje a massa em uma forma untada com achocolatado em pó;</li>
+                            <li>Leve para assar em forno pré-aquecido a 180ºC por 35 minutos.</li>
+                    
+                        </ol>
+                        </div>
+                    </div>
+                                                        <!--SELEÇÃO 2-->
+
+                    <div class="card" style="width: 350px; height: auto; margin-right: 20px;">
+                        <h5 class="card-header">Bolinho de Arroz</h5>
+                        <img src="fotos das receitas/bolinhodearroz.jpg">
+                        <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <ul style="text-align: left;">
+
+                            <li>2 xícaras (chá) de arroz cozido</li>
+                            <li>1 colher (sopa) de fermento em pó</li>
+                            <li>1 xícara (chá) de farinha de trigo</li>
+                            <li>2 ovos</li>
+                            <li>100 ml de leite</li>
+                            <li>100 gramas de queijo muçarela</li>
+                            <li>2 colheres (sopa) de queijo parmesão ralado</li>
+                            <li>tempero a gosto</li>
+                            
+                        </ul>
+                        <h5 style="text-decoration: underline; margin-bottom: 20px;">Modo de preparo</h5>
+                        <ol style="text-align: left;">
+
+                            <li>Em uma vasilha, misture o arroz, o leite, os ovos, os queijos e temperos a gosto;</li>
+                            <li>Acrescente a farinha de trigo aos poucos até dar consistência;</li>
+                            <li>Coloque o fermento por último e aqueça o óleo em uma panela com fundo grosso;</li>
+                            <li>Com a panela no fogo baixo, coloque os bolinhos e frite com cuidado;</li>
+                            <li>Depois de fritos, sirva-os!</li>
+                    
+                        </ol>
+                        </div>
+                    </div>
+                                                        <!--SELEÇÃO 3-->
+                    <div class="card" style="width: 350px; height: auto; margin-right: 20px;">
+                        <h5 class="card-header">Mousse de Maracuja</h5>
+                        <img src="fotos das receitas/moussemaracuja.jpg">
+                        <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <ul style="text-align: left;">
+
+                            <li>2 xícaras de concentrado de maracujá</li>
+                            <li>1 lata ou 395 gramas de leite condensado</li>
+                            <li>1 lata ou 300 gramas de creme de leite</li>
+                            <li>1 colher de sopa de gelatina em pó</li>
+                            <li>50 mililitros de água morna</li>
+                            
+                        </ul>
+                        <h5 style="text-decoration: underline; margin-bottom: 20px;">Modo de preparo</h5>
+                        <ol style="text-align: left;">
+
+                            <li>No liquidificador, acrescente 2 xícaras de concentrado de maracujá, 1 lata de leite condensado e 1 caixinha de creme de leite. Bata até ficar homogêneo.</li>
+                            <li>Em uma tigela, coloque 1 colher de sopa de gelatina em pó e dissolva em 50 mililitros de água morna. Em seguida, adicione a gelatina na mistura do liquidificador e bata por alguns segundos.</li>
+                            <li>Transfira a mistura para um refratário e decore com sementes de maracujá. Leve à geladeira por 4 horas antes de servir.</li>
+                    
+                        </ol>
+                        </div>
+                    </div>
+                                                        <!--SELEÇÃO 4-->
+                    <div class="card" style="width: 350px; height: auto;">
+                        <h5 class="card-header">Panceta de porco à pururuca</h5>
+                        <img src="fotos das receitas/pururuca.jpg">
+                        <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <ul style="text-align: left;">
+
+                            <li>1 quilo e 800 gramas de panceta de porco</li>
+                            <li>Pimenta-do-reino a gosto</li>
+                            <li>Páprica defumada a gosto</li>
+                            <li>1 colher de sopa de sal/li>
+                            <li>Azeite a gosto</li>
+                            <li>Sal grosso para formar uma camada fina</li>
+                            
+                        </ul>
+                        <h5 style="text-decoration: underline; margin-bottom: 20px;">Modo de preparo</h5>
+                        <ol style="text-align: left;">
+
+                            <li>Em cima de uma tábua, tempere a panceta de porco com páprica defumada, sal, pimenta-do-reino e azeite. Misture bem com as mãos.</li>
+                            <li>Vire a panceta e deixe o lado da pele para cima. Adicione o sal grosso para fazer uma camada fina. Divida a carne ao meio com uma faca.</li>
+                            <li>Leve a carne para uma assadeira coberta com papel-alumínio, com a parte brilhante encostando na carne. Leve para a geladeira, sem cobrir, por 8 horas.</li>
+                            <li>Retire da geladeira, tire todo o sal grosso e seque bem a carne com papel-toalha ou pano bem limpo. Faça furos com um garfo.</li>
+                            <li>Leve a carne suína para assar por 4 horas, numa temperatura a 120 graus Célsius em forno elétrico. Depois, coloque em temperatura máxima e deixe por mais 20 minutos. Caso use o forno convencional, aumente a temperatura. Em seguida, deixe o forno na temperatura máxima e deixe pururucar.</li>
+                    
+                        </ol>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+             </section>
+
+            <!-- Seção Cadastro -->
+            <section id="cadastro" class="section tab-pane fade;">
+                <form  style="display: flex; flex-direction: column; width: 420px; background: transparent; border: 1px solid #e6b4b4; backdrop-filter: blur(20px); border-radius: 20px; padding: 50px;">
+                    <h1 style="font-size: 30px; margin-right: auto;">Cadastrar</h1>
+                    <label for="nome" style="font-family: Arial, Helvetica, sans-serif; text-align: left;">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="email" style="font-family: Arial, Helvetica, sans-serif; text-align: left;">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="senha" style="font-family: Arial, Helvetica, sans-serif; text-align: left;">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                    <button class="btn btn-primary" style="margin-right: 40px; margin-left: 50px; margin-top: 20px; background-color: #050505; border-color: #050505;"> Cadastrar </button>
+                </form>
+            </section>
+
+            <!-- Seção Login -->
+            <section id="login" class="section tab-pane fade">
+                
+                    <form  style="display: flex; flex-direction: column; width: 420px; background: transparent; border: 1px solid #e6b4b4; backdrop-filter: blur(20px); border-radius: 20px; padding: 50px;">
+                    <h1    style="font-size: 20px; margin-bottom: 20px;">Usuário</h1>
+                    <label for="username" style="font-family: Arial, Helvetica, sans-serif; text-align: left;">E-mail:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password" style="font-family: Arial, Helvetica, sans-serif; text-align: left;">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button class="btn btn-primary" style="width: 50%; text-align: center; margin-left: 89px; margin-top: 20px; background-color: #050505; border-color: #050505;"> Entrar </button>
+                
+                </form>
+                </section>
+            </div>
+        </div>
+
+    <!-- Rodapé -->
+    <footer>
+        @Joan Roca 2017
+    </footer>
+
+    <!-- Link para o JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  <!-- REMOVER NÃO FUNCIONA PARTE SELEÇÃO DO MENU -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  <!-- REMOVER NÃO FUNCIONA PARTE SELEÇÃO DO MENU -->
+</body>
+</html>
